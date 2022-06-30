@@ -1,0 +1,160 @@
+@use "mixins" as mix;
+@use "colors" as col;
+@import "media" ;
+
+.pkr__container {
+  max-width: 53.333rem;
+  margin: 0 auto;
+  padding-block-start: 3.333rem;
+  padding-block-end: 3.333rem;
+  min-height: 100%;
+  //@include mix.debug;
+
+  @include screen('mobile'){
+    padding: 0 1.333rem 1.333rem ;
+  }
+
+  .breadcrumbs {
+    @include mix.flex-h;
+    justify-content: space-between;
+
+
+    a {
+      color: col.$breadcrumbColor;
+      font-weight: 600;
+      font-size: 1.1666rem;
+      cursor: pointer;
+
+      &.current {
+        font-weight: 300;
+        opacity: 0.5;
+      }
+    }
+  }
+
+  .titles {
+    h1 {
+      margin-block-end: 0.333rem;
+    }
+  }
+
+  .main {
+    font-size: 1.5rem;
+    @include screen('mobile'){
+      font-size: 1.333rem;
+    }
+    .pic__wrapper {
+      margin: 0 auto 0 0;
+      img {
+        object-fit: cover;
+      }
+
+
+    }
+
+    .instruction__title{
+      margin-block-end: 0.333rem;
+
+      @include screen('mobile'){
+        font-size: 1.333rem;
+      }
+    }
+    .instructions__list{
+      padding-inline-start: 2rem;
+    }
+    .attention{
+      font-size: 0.857rem;
+      font-weight: 600;
+    }
+  }
+  .qa{
+    .qa__title{
+      margin-block-end: 1.333rem;
+      display: block;
+
+      @include screen('mobile'){
+        font-size: 1.833rem;
+      }
+    }
+    .click__on{
+      font-weight: 400;
+      color: col.$instructionColor;
+    ;
+    }
+  }
+  .more__questions {
+    margin-block-end: 4rem;
+    @include mix.flex-h;
+    a {
+      color: col.$linkColor;
+      cursor: pointer;
+      text-decoration: none;
+      margin-inline-end: 0.333rem;
+      display: inline-block;
+    }
+
+
+  }
+  .more__info{
+    h3{
+      margin-block-end: 2.416rem;
+    }
+    .story{
+      display: flex;
+
+      .story__title{
+        font-size: 1.666rem;
+        font-weight: 600;
+        font-family: Heebo-Bold,sans-serif;
+
+
+      }
+    }
+    .col__left{
+      @include screen('mobile'){
+        order: 1;
+      }
+      p{
+        @include screen('mobile'){
+
+              font-size: 1.166rem;
+        }
+      }
+      .alert_instructions-danger{
+        display: none;
+      }
+
+      &.danger{
+        .alert_instructions-danger{
+          display: inline-block;
+          padding: 0 0.666rem;
+          border-radius: 4px;
+          font-size: 0.833rem;
+        }
+      }
+    }
+    .col__right{
+      margin-inline-end: 1.333rem;
+      min-height: 128px;
+      min-width: 112px;
+
+        img{
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          border-radius: 12px;
+        }
+
+      @include screen('mobile'){
+        order: 2;
+        margin-inline-end: 0;
+
+      }
+
+    }
+    .read__time-wrapper{
+      font-size: 1.166rem;
+      margin-block-start: 2.583rem;
+    }
+  }
+}

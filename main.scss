@@ -1,0 +1,44 @@
+@import "assets/styles/reset";
+@import "assets/styles/normalize";
+@import "assets/styles/typography";
+@import "assets/styles/mixins";
+@import "assets/styles/variables";
+@import "assets/styles/colors";
+@import "assets/styles/scrollbar";
+@import "assets/styles/utilities";
+@import "assets/styles/media";
+@import "assets/styles/bootstrap";
+@import "assets/styles/story";
+
+
+
+
+html{
+  //This defines what 1rem is
+  direction: rtl;
+  font-size: 62.5%; //1 rem = 10px; 10px/16px * 100% = 62.5%
+
+
+  @include screen('laptop') { // width < 1200?
+    font-size: 56.25%; //1 rem = 9px, 9/16 * 100% = 50%
+  }
+
+  @include screen('tablet') { // width < 900?
+    font-size: 50%; //1 rem = 8px, 8/16 * 100% = 50%
+  }
+
+  @include screen('mobile') { // width < 600?
+    font-size: 62.5%; //1 rem = 10px, 10/16 * 100% = 62.5%
+  }
+
+  @include screen('desktop') {
+    font-size: 75%; //1rem = 12, 12/16 * 100%
+  }
+}
+body{
+  height: 100vh;
+  font-family: Heebo-Regular,sans-serif;
+  background-color: $bodyBg;
+}
+
+

@@ -1,0 +1,56 @@
+@use "colors" as col;
+@use "mixins" as mix;
+@import "media";
+
+
+.divider_hr{
+  height: 4px;
+  width: 80px;
+  background: col.$dividerHrBg;
+  box-shadow: col.$dividerHrShadow;
+  margin-block: 1.333rem 4rem;
+  border-radius: 16px;
+
+}
+.story__divider{
+  height: 1px;
+  background: rgba(34, 34, 33, 0.4);
+  display: block;
+  width: 100%;
+  opacity: 0.4;
+  margin-block: 1rem;
+
+}
+.m-1{
+  margin-block: 2rem 1rem;
+}
+.f-bold{
+  font-weight: 700;
+}
+.fs-22{
+  font-size: 1.833rem
+}
+.fs-16{
+  font-size: 1.333rem;
+}
+video{
+  width: 100%;
+}
+
+.pkr__title{
+  font-weight: 700;
+  font-size: 2.666rem;
+}
+.pkr__subtitle{
+  font-weight: 500;
+  font-size: 1.5rem;
+
+  @include screen('mobile'){
+    font-size: 1.333rem;
+  }
+}
+.alert_instructions-danger{
+  background: #ED0000;
+  color: #fff
+;
+}
