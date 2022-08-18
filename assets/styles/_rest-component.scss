@@ -21,7 +21,7 @@
 
       &.multiple{
         img.notification_type{
-          display: none;
+         
         }
       }
 
@@ -59,13 +59,13 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    padding: 32px 0 36px 0;
+    padding: 32px 0 44px 0;
     border-left: 0;
     border-right: 0 ;
     border-bottom: 4px solid $dangerColor ;
 
     @include screen('tablet'){
-      padding: 0 0 36px 0;
+      padding: 0;
     }
 
     .one__notification{
@@ -145,7 +145,6 @@
             @include screen('tablet'){
               border-left: 1px solid rgba(34, 34, 33, 0.16);
             }
-
           }
 
 
@@ -183,9 +182,6 @@
                 display: none;
               }
             }
-
-
-
           }
 
           .cities_instructions__wrapper{
@@ -236,6 +232,7 @@
                 justify-content: center;
                 align-items: center;
                 cursor: pointer;
+                color: $linkColor;
                 a{
                   display: flex;
                   align-items: center;

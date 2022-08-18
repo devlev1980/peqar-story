@@ -1067,9 +1067,6 @@ video {
 .pkr__panel-container .panel-heading .panel-title img {
   margin-inline-end: 7px;
 }
-.pkr__panel-container .panel-heading .panel-title.multiple img.notification_type {
-  display: none;
-}
 .pkr__panel-container a[data-parent="#accordion"] {
   text-align: center;
   height: 50px;
@@ -1096,14 +1093,14 @@ video {
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: 32px 0 36px 0;
+  padding: 32px 0 44px 0;
   border-left: 0;
   border-right: 0;
   border-bottom: 4px solid #ED0000;
 }
 @media only screen and (max-width: 57.25em) {
   .pkr__panel-container .panel-body {
-    padding: 0 0 36px 0;
+    padding: 0;
   }
 }
 .pkr__panel-container .panel-body .one__notification {
@@ -1248,6 +1245,7 @@ video {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  color: #1D55D0;
 }
 .pkr__panel-container .panel-body.multiple .multiple__notifications .wrapper .cities_instructions__wrapper .instructions .instructions__link a {
   display: flex;
